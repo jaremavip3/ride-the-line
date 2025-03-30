@@ -59,9 +59,9 @@ export default function Hero() {
     <>
       <style>{customCSS}</style>
       <section className="responsive-bg px-10 pt-8 pb-6 text-white flex flex-col justify-between" style={style}>
-        <div className="flex flex-row justify-between items-center font-bold text-xl gap-30 text-center lg:text-4xl lg:font-extrabold  ">
-          <span className="text-red-500/85  rounded-2xl bg-white/25 p-1 lg:p-3 ">ABOUT THE FILM</span>
-          <span className="text-red-500/85  rounded-2xl bg-white/25 p-1 lg:p-3">HOST A SCREENING</span>
+        <div className="flex flex-row justify-between items-center font-bold text-xl gap-30 text-center lg:text-5xl lg:font-extrabold  ">
+          <span className="text-white  ">ABOUT THE FILM</span>
+          <span className="text-white  ">HOST A SCREENING</span>
         </div>
         <div className="flex-grow"></div>
 
