@@ -39,7 +39,7 @@ export default function Hero() {
   const customCSS = `
     @media (min-width: 624px) {
       .responsive-bg {
-       background-size: 100vw 110vh;
+       background-size: auto 110vh;
         background-image: ${desktopBackgroundImage};
         
       }
