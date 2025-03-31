@@ -71,7 +71,7 @@ export default function Hero() {
             <h1 className="text-5xl lg:text-6xl font-extrabold text-white ">
               Ride the <span className="text-red-500/85 underline">Line</span>
             </h1>
-            <button className="lg:px-12 lg:py-4 lg:border-white lg:text-white lg:shadow-[0_0_0_2px_#ffffff_inset] underline underline-offset-3 shadow-[0_0_0_3px_#000000_inset] px-9 py-3 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
+            <button className="lg:px-12 lg:py-4 mt-2 lg:border-white lg:text-white lg:shadow-[0_0_0_2px_#ffffff_inset] underline underline-offset-3 shadow-[0_0_0_3px_#000000_inset] px-9 py-3 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
               WATCH THE TRAILER
             </button>
           </div>
