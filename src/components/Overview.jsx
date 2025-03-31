@@ -25,8 +25,8 @@ export default function Overview() {
             On top of that de-occupied, but still mined territories, prepared many surprises for the two daredevils on
             <span className="italic"> the line of war</span>, obscurity and longing for victory.
           </p> */}
-          {/* Декоративна лінія внизу */}
-          <div className="h-0.5 w-30 bg-red-500/50 mx-auto my-16"></div>
+          {/* Decorative line */}
+          <div className="h-0.5 w-30 bg-red-500/50 mx-auto my-12"></div>
           <h2 className="text-3xl lg:text-4xl font-black text-red-600 tracking-wide text-center mb-8">TRAILER</h2>
           <div className="relative block w-full pb-[56.25%] ">
             <iframe
@@ -41,6 +41,70 @@ export default function Overview() {
               allowfullscreen
               loading="lazy"
             ></iframe>
+          </div>
+          {/* Decorative line */}
+          <div className="h-0.5  w-full bg-red-500/50  mt-6"></div>
+          {/* Sponsors */}
+          <div className="mt-8">
+            <h3 className="text-xl font-medium text-gray-200 text-center mb-4">Supported by</h3>
+            <div className="grid grid-cols-2 gap-8  sm:gap-12 md:grid-cols-3 lg:grid-cols-8">
+              <div className="flex justify-center items-center">
+                <img
+                  src="/sponsors/gorgany_logo.svg"
+                  alt="Gorgany"
+                  className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all flex justify-center items-center"
+                />
+              </div>
+              <div className="flex justify-center items-center">
+                <img
+                  src="/sponsors/turbat_logo.svg"
+                  alt="Turbat"
+                  className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all "
+                />
+              </div>
+              <div className="flex justify-center items-center">
+                <img
+                  src="/sponsors/aid-for-artists_logo.jpg"
+                  alt="Aid for Artists"
+                  className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                />
+              </div>
+              <div className="flex justify-center items-center">
+                <img
+                  src="/sponsors/can-ukr-foundation_logo.png"
+                  alt="Canada-Ukraine Foundation"
+                  className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                />
+              </div>
+              <div className="flex justify-center items-center">
+                <img
+                  src="/sponsors/james-cook_logo.png"
+                  alt="James Cook"
+                  className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                />
+              </div>
+              <div className="flex justify-center items-center">
+                <img
+                  src="/sponsors/svi_logo.png"
+                  alt="SVI"
+                  className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                />
+              </div>
+              <div className="flex justify-center items-center">
+                <img
+                  src="/sponsors/ukrainian-arts-to_logo.png"
+                  alt="Ukrainian Arts Toronto"
+                  className="h-13 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                />
+              </div>
+              <div className="flex justify-center items-center">
+                <img
+                  src="/sponsors/velo-planeta_logo.png"
+                  alt="Velo Planeta"
+                  className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
