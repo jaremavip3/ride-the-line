@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="bg-white ">
-      <div className="h-0.5 w-full bg-red-500/50 mx-auto mt-10"></div>
+    <footer className="bg-white mt-10">
+      <div className="h-0.5 w-full bg-red-500/50 mx-auto "></div>
       <div className=" px-6 lg:px-10 py-6 flex flex-col gap-4 items-center justify-center ">
         <span className="text-2xl text-black decoration-red-600 underline underline-offset-3">CONTACT</span>
         <span className="text-2xl text-black decoration-red-600 underline underline-offset-3">FACEBOOK</span>
