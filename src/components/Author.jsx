@@ -18,7 +18,7 @@ export default function Author() {
 
           {/* Біографія */}
           <div>
-            <h3 className="text-xl font-bold mb-4 md:text-left text-center">
+            <h3 className="text-xl font-bold mb-4 md:text-left text-center text-gray-900">
               Director Biography - <span className="text-red-600">Ihor Volochii</span>
             </h3>
             <p className="text-pretty text-lg leading-relaxed tracking-wide text-gray-600 font-medium">
@@ -30,7 +30,7 @@ export default function Author() {
 
         {/* Заява режисера */}
         <div className="relative">
-          <h3 className="text-xl font-bold mb-4 md:text-center text-center">Director Statement</h3>
+          <h3 className="text-xl font-bold mb-4 md:text-center text-center  text-gray-900">Director Statement</h3>
           <p className="text-pretty text-lg leading-relaxed tracking-wide text-gray-600 md:text-center font-medium">
             When I first thought about making videos as a profession I supposed that it will teach me to see all the
             best in the world at different angles. But nowadays reality is that I pass through the dilapidated towns and
