@@ -2,7 +2,7 @@ export default function Overview() {
   return (
     <section className="px-6 py-16 lg:py-24 bg-[#282A25]">
       <div className="max-w-3xl mx-auto">
-        <div className="flex items-center justify-center mb-10">
+        <div className="flex items-center justify-center mb-8">
           <h2 className="text-3xl lg:text-4xl font-black text-red-600 tracking-wide">OVERVIEW</h2>
         </div>
 
@@ -25,12 +25,15 @@ export default function Overview() {
             On top of that de-occupied, but still mined territories, prepared many surprises for the two daredevils on
             <span className="italic"> the line of war</span>, obscurity and longing for victory.
           </p> */}
-          <div className="relative block w-full pb-[56.25%] mt-20">
+          {/* Декоративна лінія внизу */}
+          <div className="h-0.5 w-30 bg-red-500/50 mx-auto my-16"></div>
+          <h2 className="text-3xl lg:text-4xl font-black text-red-600 tracking-wide text-center mb-8">TRAILER</h2>
+          <div className="relative block w-full pb-[56.25%] ">
             <iframe
               className="absolute top-0 left-0"
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/rH3pJvfLfVc?si=XsSLZ05uKH82Icja&amp;controls=0"
+              src="https://www.youtube.com/embed/rH3pJvfLfVc?si=XsSLZ05uKH82Icja&amp;controls=1&vq=hd1080"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -39,9 +42,6 @@ export default function Overview() {
               loading="lazy"
             ></iframe>
           </div>
-
-          {/* Декоративна лінія внизу */}
-          <div className="h-0.5 w-30 bg-red-500/50 mx-auto mt-10"></div>
         </div>
       </div>
     </section>
