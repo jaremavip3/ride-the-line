@@ -32,14 +32,14 @@ export default function Hero() {
     height: "100vh",
     width: "100%",
     minWidth: "320px",
-    backgroundPosition: "top center",
+    backgroundPosition: " bottom",
 
     backgroundRepeat: "no-repeat",
   };
   const customCSS = `
     @media (min-width: 624px) {
       .responsive-bg {
-       background-size: auto 110vh;
+       background-size: cover;
         background-image: ${desktopBackgroundImage};
         
       }
