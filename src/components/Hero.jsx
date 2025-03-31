@@ -58,7 +58,6 @@ export default function Hero() {
 
   return (
     <>
-      {" "}
       <style>{customCSS}</style>
       <section className="bg-red-600/85">
         <div className="responsive-bg px-10 pt-8 pb-6 text-white flex flex-col justify-between" style={style}>
