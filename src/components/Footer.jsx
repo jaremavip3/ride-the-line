@@ -8,7 +8,7 @@ export default function Footer() {
         <span className="text-2xl text-black decoration-red-600 underline underline-offset-3">INSTAGRAM</span>
         <span className="text-2xl text-black decoration-red-600 underline underline-offset-3">TWITTER (X)</span>
       </div>
-      <div className="flex flex-row justify-around items-center pt-4">
+      <div className="flex flex-row justify-around items-center pt-4 text-black ">
         <span className="text-lg ">Ihor Volochii 2025</span>
         <div className=" text-lg font-extrabold ">
           Ride the <span className=" text-red-600/85">LINE...</span>
