@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import Image from "next/image";
 import Author from "@/components/Author";
 import { useEffect } from "react";
+import FixedFooter from "@/components/FixedFooter";
 
 export default function Home() {
   useEffect(() => {
@@ -48,6 +49,7 @@ export default function Home() {
       </div>
       <Header />
       <Hero />
+      <FixedFooter />
       <Overview />
       <Author />
 
