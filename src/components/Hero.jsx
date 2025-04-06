@@ -1,6 +1,7 @@
 import { getImageProps } from "next/image";
-import mobile_background from "../../public/ride-the-line_mobile.jpg";
-import desktop_background from "../../public/ride-the-line_desktop.jpg";
+
+import desktop_background from "../../public/test_new.jpg";
+import mobile_background from "../../public/test_new_mobile.jpg";
 
 function getBackgroundImage(srcSet = "") {
   const imageSet = srcSet
@@ -14,17 +15,12 @@ function getBackgroundImage(srcSet = "") {
 }
 
 export default function Hero() {
-  // getImageProps has inside props object and props object has inside srcSet property
-  // srcSet property is a string with the format "url1 1x, url2 2x"
-  // This is how we extract the srcSet property. Alternatively we could have wrote
-  // const result = getImageProps(...);
-  // const srcSet = result.props.srcSet;О
   const {
     props: { srcSet: desktopSrcSet },
-  } = getImageProps({ alt: "desktop backgroudn image", width: 1920, height: 1080, src: desktop_background });
+  } = getImageProps({ alt: "desktop backgroudn image", src: desktop_background });
   const {
     props: { srcSet: mobileSrcSet },
-  } = getImageProps({ alt: "desktop backgroudn image", src: mobile_background });
+  } = getImageProps({ alt: "mobile backgroudn image", src: mobile_background });
 
   const desktopBackgroundImage = getBackgroundImage(desktopSrcSet);
   const mobileBackgroundImage = getBackgroundImage(mobileSrcSet);
@@ -32,7 +28,7 @@ export default function Hero() {
     height: "100vh",
     width: "100%",
 
-    backgroundPosition: "top",
+    backgroundPosition: "center",
 
     backgroundRepeat: "no-repeat",
   };
@@ -41,18 +37,17 @@ export default function Hero() {
       .responsive-bg {
        background-size: cover;
         background-image: ${desktopBackgroundImage};
-        
+
       }
     }
-    
+
     @media (max-width: 623px) {
       .responsive-bg {
-     
+           background-size: auto 100vh ;
         background-image: ${mobileBackgroundImage};
-         background-size: auto 90vh;
-            
+        background-position: center;
       }
-       
+
     }
   `;
 
@@ -61,7 +56,7 @@ export default function Hero() {
       <style>{customCSS}</style>
       <section className="bg-red-600/85">
         <div className="responsive-bg px-10 pt-8 pb-6 text-white flex flex-col justify-between" style={style}>
-          <div className="flex flex-row justify-between items-center font-bold text-xl gap-30 text-center lg:text-5xl lg:font-extrabold  ">
+          {/* <div className="flex flex-row justify-between items-center font-bold text-xl gap-30 text-center lg:text-5xl lg:font-extrabold  ">
             <span className="text-white  ">ABOUT THE FILM</span>
             <span className="text-white  ">HOST A SCREENING</span>
           </div>
@@ -74,7 +69,7 @@ export default function Hero() {
             <button className="lg:px-12 lg:py-4 mt-2 lg:border-white lg:text-white lg:shadow-[0_0_0_2px_#ffffff_inset] underline underline-offset-3 shadow-[0_0_0_3px_#000000_inset] px-9 py-3 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
               WATCH THE TRAILER
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
     </>

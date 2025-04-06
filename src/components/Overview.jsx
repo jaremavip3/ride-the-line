@@ -35,7 +35,7 @@ export default function Overview() {
               height="100%"
               src="https://www.youtube.com/embed/rH3pJvfLfVc?si=XsSLZ05uKH82Icja&amp;controls=1&vq=hd1080"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen

@@ -24,3 +24,15 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@media (max-width: 768px) {
+  .background-image-container img {
+    object-fit: contain !important;
+    object-position: center !important;
+    max-width: none !important;
+    width: 200% !important; /* Makes the image wider than the viewport */
+    height: 100% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}

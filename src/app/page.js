@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <div className=" font-[family-name:var(--font-geist-sans)]">
       {/* SVG path container */}
-      <div className="z-10 fixed top-0 left-0 w-full h-full  overflow-hidden text-center">
+      <div className="z-10 fixed top-100 right-33 w-full h-full  overflow-hidden text-center">
         {/* SVG PATH */}
 
         <svg
