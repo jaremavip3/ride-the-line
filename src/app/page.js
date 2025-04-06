@@ -9,30 +9,30 @@ import { useEffect } from "react";
 import FixedFooter from "@/components/FixedFooter";
 
 export default function Home() {
-  useEffect(() => {
-    let path = document.querySelector("path");
-    let pathLength = path.getTotalLength();
+  // useEffect(() => {
+  //   let path = document.querySelector("path");
+  //   let pathLength = path.getTotalLength();
 
-    path.style.strokeDasharray = pathLength + " " + pathLength; // the total length of the path
-    path.style.strokeDashoffset = pathLength; //offset the dash to the length of the path
+  //   path.style.strokeDasharray = pathLength + " " + pathLength; // the total length of the path
+  //   path.style.strokeDashoffset = pathLength; //offset the dash to the length of the path
 
-    window.addEventListener("scroll", () => {
-      var scrollPercentage =
-        (document.documentElement.scrollTop + document.body.scrollTop) /
-        (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-      var drawLength = pathLength * scrollPercentage;
-      path.style.strokeDashoffset = pathLength - drawLength; //draw the path as you scroll
-    });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", () => {
+  //     var scrollPercentage =
+  //       (document.documentElement.scrollTop + document.body.scrollTop) /
+  //       (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+  //     var drawLength = pathLength * scrollPercentage;
+  //     path.style.strokeDashoffset = pathLength - drawLength; //draw the path as you scroll
+  //   });
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <div className=" font-[family-name:var(--font-geist-sans)]">
       {/* SVG path container */}
-      <div className="z-10 fixed top-100 right-33 w-full h-full  overflow-hidden text-center">
-        {/* SVG PATH */}
+      {/* <div className="z-10 fixed top-100 right-33 w-full h-full  overflow-hidden text-center"> */}
+      {/* SVG PATH */}
 
-        <svg
+      {/* <svg
           className="h-full inline-block"
           width="565"
           height="2837"
@@ -46,7 +46,7 @@ export default function Home() {
             strokeWidth="5"
           />
         </svg>
-      </div>
+      </div> */}
       <Header />
       <Hero />
       <FixedFooter />

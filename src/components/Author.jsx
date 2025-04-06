@@ -30,19 +30,19 @@ export default function Author() {
 
         {/* Заява режисера */}
         <div className="relative">
-          <h3 className="text-xl font-bold mb-4 md:text-center text-center  text-gray-900">Director Statement</h3>
-          <p className="text-pretty text-lg leading-relaxed tracking-wide text-gray-600 md:text-center font-medium">
+          <h3 className="text-xl font-bold mb-4 md:text-center text-left  text-gray-900">Director Statement</h3>
+          <p className="text-pretty text-lg leading-relaxed tracking-wide text-gray-600 md:text-left font-medium">
             When I first thought about making videos as a profession I supposed that it will teach me to see all the
             best in the world at different angles. But nowadays reality is that I pass through the dilapidated towns and
             villages of my country and listen to stories that bring goosebumps and tears to my eyes.
           </p>
 
-          <p className="text-pretty text-lg leading-relaxed tracking-wide text-gray-600 mt-6 md:text-center font-medium">
+          <p className="text-pretty text-lg leading-relaxed tracking-wide text-gray-600 mt-6 md:text-left font-medium">
             Believe me, I would prefer not to make movies like this and ride my bike somewhere in the middle of Alps
             rather than in the middle of ruined buildings. But these are Ukrainian realities today.
           </p>
 
-          <p className="text-pretty text-lg leading-relaxed tracking-wide text-gray-600 mt-6 md:text-center font-medium">
+          <p className="text-pretty text-lg leading-relaxed tracking-wide text-gray-600 mt-6 md:text-left font-medium">
             I'm really addicted to cycling, but even more I{" "}
             <span className="text-red-600 font-bold">love my country</span>, and this film was born out of this love.
           </p>
