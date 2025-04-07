@@ -1,5 +1,4 @@
 import { getImageProps } from "next/image";
-
 import desktop_background from "../../public/test_new.jpg";
 import mobile_background from "../../public/test_new_mobile.jpg";
 
@@ -54,6 +53,7 @@ export default function Hero() {
   return (
     <>
       <style>{customCSS}</style>
+
       <section className="bg-red-600/85">
         <div className="responsive-bg px-10 pt-8 pb-6 text-white flex flex-col justify-between" style={style}>
           {/* <div className="flex flex-row justify-between items-center font-bold text-xl gap-30 text-center lg:text-5xl lg:font-extrabold  ">

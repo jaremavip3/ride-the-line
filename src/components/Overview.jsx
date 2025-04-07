@@ -42,69 +42,69 @@ export default function Overview() {
               loading="lazy"
             ></iframe>
           </div>
-          {/* Decorative line */}
-          <div className="h-0.5  w-full bg-red-500/50  mt-6"></div>
-          {/* Sponsors */}
-          <div className="mt-8">
-            <h3 className="text-xl font-medium text-gray-200 text-center mb-4">Supported by</h3>
-            <div className="grid grid-cols-2 gap-8  sm:gap-12 md:grid-cols-3 lg:grid-cols-8">
-              <div className="flex justify-center items-center">
-                <img
-                  src="/sponsors/gorgany_logo.svg"
-                  alt="Gorgany"
-                  className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all flex justify-center items-center"
-                />
-              </div>
-              <div className="flex justify-center items-center">
-                <img
-                  src="/sponsors/turbat_logo.svg"
-                  alt="Turbat"
-                  className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all "
-                />
-              </div>
-              <div className="flex justify-center items-center">
-                <img
-                  src="/sponsors/aid-for-artists_logo.jpg"
-                  alt="Aid for Artists"
-                  className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
-                />
-              </div>
-              <div className="flex justify-center items-center">
-                <img
-                  src="/sponsors/can-ukr-foundation_logo.png"
-                  alt="Canada-Ukraine Foundation"
-                  className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
-                />
-              </div>
-              <div className="flex justify-center items-center">
-                <img
-                  src="/sponsors/james-cook_logo.png"
-                  alt="James Cook"
-                  className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
-                />
-              </div>
-              <div className="flex justify-center items-center">
-                <img
-                  src="/sponsors/svi_logo.png"
-                  alt="SVI"
-                  className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
-                />
-              </div>
-              <div className="flex justify-center items-center">
-                <img
-                  src="/sponsors/ukrainian-arts-to_logo.png"
-                  alt="Ukrainian Arts Toronto"
-                  className="h-13 w-auto object-contain grayscale hover:grayscale-0 transition-all"
-                />
-              </div>
-              <div className="flex justify-center items-center">
-                <img
-                  src="/sponsors/velo-planeta_logo.png"
-                  alt="Velo Planeta"
-                  className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
-                />
-              </div>
-            </div>
+        </div>
+      </div>
+      {/* Decorative line */}
+      <div className="h-0.5  w-11/12 bg-red-500/50 mx-auto mt-6 "></div>
+      {/* Sponsors */}
+      <div className="mt-8">
+        <h3 className="text-xl font-medium text-gray-200 text-center mb-4 mx-8 ">Supported by</h3>
+        <div className="grid grid-cols-2 gap-8  sm:gap-12 md:grid-cols-3 lg:flex lg:flex-wrap lg:justify-center lg:gap-8">
+          <div className="flex justify-center items-center">
+            <img
+              src="/sponsors/gorgany_logo.svg"
+              alt="Gorgany"
+              className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all flex justify-center items-center"
+            />
+          </div>
+          <div className="flex justify-center items-center">
+            <img
+              src="/sponsors/turbat_logo.svg"
+              alt="Turbat"
+              className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all "
+            />
+          </div>
+          <div className="flex justify-center items-center">
+            <img
+              src="/sponsors/aid-for-artists_logo.jpg"
+              alt="Aid for Artists"
+              className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+            />
+          </div>
+          <div className="flex justify-center items-center">
+            <img
+              src="/sponsors/can-ukr-foundation_logo.png"
+              alt="Canada-Ukraine Foundation"
+              className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+            />
+          </div>
+          <div className="flex justify-center items-center">
+            <img
+              src="/sponsors/james-cook_logo.png"
+              alt="James Cook"
+              className="h-15 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+            />
+          </div>
+          <div className="flex justify-center items-center">
+            <img
+              src="/sponsors/svi_logo.png"
+              alt="SVI"
+              className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+            />
+          </div>
+          <div className="flex justify-center items-center">
+            <img
+              src="/sponsors/ukrainian-arts-to_logo.png"
+              alt="Ukrainian Arts Toronto"
+              className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+            />
+          </div>
+          <div className="flex justify-center items-center">
+            <img
+              src="/sponsors/velo-planeta_logo.png"
+              alt="Velo Planeta"
+              className="h-11 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+            />
           </div>
         </div>
       </div>
