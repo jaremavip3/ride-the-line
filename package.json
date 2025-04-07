@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@dotlottie/player-component": "^2.7.12",
-    "@dotlottie/react-player": "^1.6.19",
     "framer-motion": "^12.6.3",
+    "lottie-react": "^2.4.1",
     "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

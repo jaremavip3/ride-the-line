@@ -1,13 +1,19 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { DotLottiePlayer, Controls } from "@dotlottie/react-player";
+import dynamic from "next/dynamic";
 // import bike_animation from "../../public/animations/wCDtr8Wnan.lottie";
-
-import "@dotlottie/react-player/dist/index.css";
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function MovingLottie() {
+  const [animationData, setAnimationData] = useState(null);
+  useEffect(() => {
+    // Load the animation data on the client side
+    import("/public/animations/bike.json")
+      .then((data) => setAnimationData(data.default || data))
+      .catch((err) => console.error("Failed to load animation:", err));
+  }, []);
   return (
     <div className="absolute  w-full bottom-0  z-10  overflow-hidden h-[200px]">
       <motion.div
@@ -25,7 +31,7 @@ export default function MovingLottie() {
           left: 0,
         }}
       >
-        <DotLottiePlayer src="/animations/bike.lottie" autoplay loop style={{ width: 200 }} />
+        {animationData && <Lottie animationData={animationData} loop={true} autoplay={true} style={{ width: 200 }} />}
       </motion.div>
     </div>
   );
