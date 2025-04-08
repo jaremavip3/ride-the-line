@@ -16,7 +16,7 @@ export default function Home() {
       <ProgressBar />
 
       <Header />
-      <MovingLottie />
+
       <Hero />
 
       <FixedFooter />
