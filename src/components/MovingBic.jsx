@@ -15,19 +15,22 @@ export default function MovingLottie() {
       .catch((err) => console.error("Failed to load animation:", err));
   }, []);
   return (
-    <div className="absolute  w-full bottom-0  z-10  overflow-hidden h-[200px]">
+    <div
+      className="absolute  w-full bottom-0  z-10  h-[200px] pointer-events-none overflow-hidden"
+      style={{ bottom: "50px" }}
+    >
       <motion.div
         initial={{ x: -200, y: 0 }} // Start position (left of screen)
         animate={{ x: "100vw", y: 0 }} // End position (right of screen)
         transition={{
           //   type: "inertia", // Type of animation
           duration: 8, // Animation duration in seconds
-          repeat: 1, //
+          repeat: 0, //
           ease: "easeInOut", // Easing function
         }}
         style={{
           position: "absolute",
-          bottom: 0,
+          bottom: -20, // Adjust this value to position the animation directly on the red line
           left: 0,
         }}
       >
