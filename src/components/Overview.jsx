@@ -1,3 +1,13 @@
+import Image from "next/image";
+import Gorgany_logo from "../../public/sponsors/gorgany_logo.svg";
+import Turbat_logo from "../../public/sponsors/turbat_logo.svg";
+import CanUkrFoundation_logo from "../../public/sponsors/can-ukr-foundation_logo.png";
+import AidForArtists_logo from "../../public/sponsors/aid-for-artists_logo.jpg";
+import VeloPlaneta_logo from "../../public/sponsors/velo-planeta_logo.png";
+import SVI_logo from "../../public/sponsors/svi_logo.png";
+import JamesCook_logo from "../../public/sponsors/james-cook_logo.png";
+import UkrainianArtsTo_logo from "../../public/sponsors/ukrainian-arts-to_logo.png";
+
 export default function Overview() {
   return (
     <section className="px-6 py-16 lg:py-24 bg-[#282A25]">
@@ -26,7 +36,7 @@ export default function Overview() {
             <span className="italic"> the line of war</span>, obscurity and longing for victory.
           </p> */}
           {/* Decorative line */}
-          <div className="h-0.5 w-30 bg-red-500/50 mx-auto my-12"></div>
+          <div className="h-0.5 w-52 bg-red-500/50 mx-auto my-12"></div>
           <h2 className="text-3xl lg:text-4xl font-black text-red-600 tracking-wide text-center mb-8">TRAILER</h2>
           <div className="relative block w-full pb-[56.25%] ">
             <iframe
@@ -47,64 +57,53 @@ export default function Overview() {
       {/* Decorative line */}
       <div className="h-0.5  w-11/12 bg-red-500/50 mx-auto mt-6 "></div>
       {/* Sponsors */}
-      <div className="mt-8">
+      <div className="mt-8 ">
         <h3 className="text-xl font-medium text-gray-200 text-center mb-4 mx-8 ">Supported by</h3>
-        <div className="grid grid-cols-2 gap-8  sm:gap-12 md:grid-cols-3 lg:flex lg:flex-wrap lg:justify-center lg:gap-8">
-          <div className="flex justify-center items-center">
-            <img
-              src="/sponsors/gorgany_logo.svg"
-              alt="Gorgany"
-              className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all flex justify-center items-center"
-            />
+        <div className="flex flex-col gap-8 md:flex-row md:justify-center md:flex-wrap ">
+          {/* first row */}
+          <div className="flex flex-row justify-between h-14 md:gap-8 ">
+            <div className="h-full relative">
+              <Image src={Gorgany_logo} alt="Gorgany" className="w-full h-full object-contain" />
+            </div>
+            <div className="h-full relative">
+              <Image src={Turbat_logo} alt="Turbat" className="w-full h-full object-contain" />
+            </div>
           </div>
-          <div className="flex justify-center items-center">
-            <img
-              src="/sponsors/turbat_logo.svg"
-              alt="Turbat"
-              className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all "
-            />
+          {/* second row */}
+          <div className="flex flex-row justify-between h-14 md:gap-8 ">
+            <div className="h-full relative">
+              <Image
+                src={CanUkrFoundation_logo}
+                alt="Canada-Ukraine Foundation"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="h-full relative">
+              <Image src={AidForArtists_logo} alt="Aid for Artists" className="w-full h-full object-contain" />
+            </div>
           </div>
-          <div className="flex justify-center items-center">
-            <img
-              src="/sponsors/aid-for-artists_logo.jpg"
-              alt="Aid for Artists"
-              className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
-            />
+          {/*  third row */}
+          <div className="flex justify-between h-16 gap-8  md:h-14 md:gap-8">
+            <div className="h-full relative justify-self-end  md:justify-self-auto basis-4/6 md:basis-auto">
+              <Image
+                src={VeloPlaneta_logo}
+                alt="Velo Planeta"
+                className="object-left md:object-center w-full h-full object-contain"
+              />
+            </div>
+
+            <div className="h-full relative">
+              <Image src={SVI_logo} alt="SVI" className="w-full h-full object-contain" />
+            </div>
           </div>
-          <div className="flex justify-center items-center">
-            <img
-              src="/sponsors/can-ukr-foundation_logo.png"
-              alt="Canada-Ukraine Foundation"
-              className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
-            />
-          </div>
-          <div className="flex justify-center items-center">
-            <img
-              src="/sponsors/james-cook_logo.png"
-              alt="James Cook"
-              className="h-15 w-auto object-contain grayscale hover:grayscale-0 transition-all"
-            />
-          </div>
-          <div className="flex justify-center items-center">
-            <img
-              src="/sponsors/svi_logo.png"
-              alt="SVI"
-              className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
-            />
-          </div>
-          <div className="flex justify-center items-center">
-            <img
-              src="/sponsors/ukrainian-arts-to_logo.png"
-              alt="Ukrainian Arts Toronto"
-              className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
-            />
-          </div>
-          <div className="flex justify-center items-center">
-            <img
-              src="/sponsors/velo-planeta_logo.png"
-              alt="Velo Planeta"
-              className="h-11 w-auto object-contain grayscale hover:grayscale-0 transition-all"
-            />
+          {/* fourth row */}
+          <div className="flex justify-center gap-8 h-22 md:h-14 md:gap-8">
+            <div className="h-full relative">
+              <Image src={JamesCook_logo} alt="James Cook" className="w-full h-full object-contain" />
+            </div>
+            <div className="h-full relative">
+              <Image src={UkrainianArtsTo_logo} alt="Ukrainian Arts Toronto" className="w-full h-full object-contain" />
+            </div>
           </div>
         </div>
       </div>
