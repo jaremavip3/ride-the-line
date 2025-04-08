@@ -32,8 +32,16 @@ export default function FixedFooter() {
   };
 
   return (
-    <>
-      <MovingLottie />
+    <div className="relative">
+      <div
+        className="fixed left-0 right-0 pointer-events-none"
+        style={{
+          bottom: "50px",
+          zIndex: 51,
+        }}
+      >
+        <MovingLottie />
+      </div>
       <footer
         className={`fixed bottom-0 left-0 right-0 z-50 bg-white border-t-4 border-red-600 transition-all duration-250 ease-in-out ${
           isCalendarOpen ? "h-screen overflow-auto" : "h-[50px] md:h-[50px]"
@@ -110,6 +118,6 @@ export default function FixedFooter() {
           </div>
         )}
       </footer>
-    </>
+    </div>
   );
 }

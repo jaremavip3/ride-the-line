@@ -15,10 +15,7 @@ export default function MovingLottie() {
       .catch((err) => console.error("Failed to load animation:", err));
   }, []);
   return (
-    <div
-      className="absolute  w-full bottom-0  z-10  h-[200px] pointer-events-none overflow-hidden"
-      style={{ bottom: "50px" }}
-    >
+    <div className="absolute  w-full bottom-0  z-10  h-28 pointer-events-none overflow-hidden">
       <motion.div
         initial={{ x: -200, y: 0 }} // Start position (left of screen)
         animate={{ x: "100vw", y: 0 }} // End position (right of screen)
