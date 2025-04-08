@@ -1,6 +1,7 @@
 import { getImageProps } from "next/image";
 import desktop_background from "../../public/test_new.jpg";
 import mobile_background from "../../public/test_new_mobile.jpg";
+import test_background from "../../public/test_background.jpg";
 
 function getBackgroundImage(srcSet = "") {
   const imageSet = srcSet
@@ -16,7 +17,7 @@ function getBackgroundImage(srcSet = "") {
 export default function Hero() {
   const {
     props: { srcSet: desktopSrcSet },
-  } = getImageProps({ alt: "desktop backgroudn image", src: desktop_background });
+  } = getImageProps({ alt: "desktop backgroudn image", src: test_background });
   const {
     props: { srcSet: mobileSrcSet },
   } = getImageProps({ alt: "mobile backgroudn image", src: mobile_background });
