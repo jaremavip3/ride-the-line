@@ -70,7 +70,7 @@ export default function Hero() {
             onClick={() => {
               setIsPlaying(true);
             }}
-            className="  bg-red-600 p-0.5 hover:bg-red-700 transition-colors uppercase "
+            className="  bg-red-600 text-xl p-1 rounded-sm hover:bg-red-700 transition-colors uppercase "
           >
             Watch the trailer
           </button>
