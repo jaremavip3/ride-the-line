@@ -1,7 +1,12 @@
+"use client";
+import { useState } from "react";
 import { getImageProps } from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+
 import desktop_background from "../../public/test_new.jpg";
 import mobile_background from "../../public/test_new_mobile.jpg";
 import test_background from "../../public/test_background.jpg";
+import ReactPlayer from "react-player/lazy"; // Lazy loading for better performance
 
 function getBackgroundImage(srcSet = "") {
   const imageSet = srcSet
@@ -15,6 +20,9 @@ function getBackgroundImage(srcSet = "") {
 }
 
 export default function Hero() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoUrl = "/video/trailer.mp4";
+
   const {
     props: { srcSet: desktopSrcSet },
   } = getImageProps({ alt: "desktop backgroudn image", src: desktop_background });
@@ -58,7 +66,12 @@ export default function Hero() {
       <section className="relative responsive-bg text-white " style={style}>
         {/* Button on smaller screens */}
         <div className="w-full absolute top-8/12  flex justify-center z-10 sm:hidden">
-          <button className="  bg-red-600 p-0.5 hover:bg-red-700 transition-colors uppercase ">
+          <button
+            onClick={() => {
+              setIsPlaying(true);
+            }}
+            className="  bg-red-600 p-0.5 hover:bg-red-700 transition-colors uppercase "
+          >
             Watch the trailer
           </button>
         </div>
@@ -83,6 +96,9 @@ export default function Hero() {
               </a>
               <button
                 href="#trailer"
+                onClick={() => {
+                  setIsPlaying(true);
+                }}
                 className="bg-red-600 p-0.5 hover:bg-red-700 transition-colors uppercase hidden  sm:block"
               >
                 Watch the trailer
@@ -93,6 +109,57 @@ export default function Hero() {
             </div>
           </div>
         </div>
+
+        {/* Video Modal */}
+        <AnimatePresence>
+          {isPlaying && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/80 z-20 flex items-center justify-center p-4"
+              onClick={() => setIsPlaying(false)}
+            >
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                className="w-full max-w-4xl relative"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  onClick={() => setIsPlaying(false)}
+                  className="absolute -top-12 z-30 right-0 text-4xl  text-white  hover:text-red-600  md:-right-10 md:text-5xl"
+                >
+                  ×
+                </button>
+
+                <div className="relative w-full aspect-video">
+                  <ReactPlayer
+                    url="/video/trailer.mp4"
+                    width="100%"
+                    height="100%"
+                    controls={true}
+                    playing={true}
+                    style={{
+                      outline: "none",
+                    }}
+                    config={{
+                      file: {
+                        attributes: {
+                          controlsList: "nodownload",
+                          disablePictureInPicture: true,
+                        },
+                        forceVideo: true, // Important: ensures it's treated as video
+                      },
+                    }}
+                    onEnded={() => setIsPlaying(false)}
+                  />
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </section>
     </>
   );
