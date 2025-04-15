@@ -17,7 +17,7 @@ function getBackgroundImage(srcSet = "") {
 export default function Hero() {
   const {
     props: { srcSet: desktopSrcSet },
-  } = getImageProps({ alt: "desktop backgroudn image", src: test_background });
+  } = getImageProps({ alt: "desktop backgroudn image", src: desktop_background });
   const {
     props: { srcSet: mobileSrcSet },
   } = getImageProps({ alt: "mobile backgroudn image", src: mobile_background });
@@ -46,7 +46,7 @@ export default function Hero() {
            background-size: auto 100vh ;
         background-image: ${mobileBackgroundImage};
         background-position: center;
-      }
+      } 
 
     }
   `;
@@ -55,22 +55,43 @@ export default function Hero() {
     <>
       <style>{customCSS}</style>
 
-      <section className="bg-red-600/85">
-        <div className="responsive-bg px-10 pt-8 pb-6 text-white flex flex-col justify-between" style={style}>
-          {/* <div className="flex flex-row justify-between items-center font-bold text-xl gap-30 text-center lg:text-5xl lg:font-extrabold  ">
-            <span className="text-white  ">ABOUT THE FILM</span>
-            <span className="text-white  ">HOST A SCREENING</span>
+      <section className="relative responsive-bg text-white " style={style}>
+        {/* Button on smaller screens */}
+        <div className="w-full absolute top-8/12  flex justify-center z-10 sm:hidden">
+          <button className="  bg-red-600 p-0.5 hover:bg-red-700 transition-colors uppercase ">
+            Watch the trailer
+          </button>
+        </div>
+        {/* Header Text */}
+        <div className="absolute  inset-0 flex items-center  ">
+          <div className="container mx-auto px-6 md:px-12 lg:mx-16  ">
+            <div className=" md:w-1/2 lg:w-1/2 leading-[0.9] tracking-[-0.02em] text-7xl sm:text-9xl lg:text-[9rem] flex">
+              <div className="sm:bg-transparent rounded-lg ">
+                <span className="font-thin drop-shadow-2xl">RIDE</span> <br />
+                <span className="font-medium drop-shadow-2xl">THE</span> <br />
+                <span className="text-red-600/85 font-black">LINE</span>
+              </div>
+            </div>
           </div>
-          <div className="flex-grow"></div>
+        </div>
 
-          <div className="flex flex-col justify-center items-center text-center gap-22 lg:flex-row lg:justify-between lg:mb-8">
-            <h1 className="text-5xl lg:text-6xl font-extrabold text-white ">
-              Ride the <span className="text-red-500/85 underline">Line</span>
-            </h1>
-            <button className="lg:px-12 lg:py-4 mt-2 lg:border-white lg:text-white lg:shadow-[0_0_0_2px_#ffffff_inset] underline underline-offset-3 shadow-[0_0_0_3px_#000000_inset] px-9 py-3 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
-              WATCH THE TRAILER
-            </button>
-          </div> */}
+        <div className="absolute bottom-1/12 w-full ">
+          <div className="container mx-auto px-3 md:px-12 lg:px-16 sm:text-base md:text-lg lg:text-xl xl:text-2xl  ">
+            <div className=" flex gap-10 md:gap-14 lg:gap-20 text-white uppercase  justify-center items-center">
+              <a href="#overview" className="hover:underline">
+                About the film
+              </a>
+              <button
+                href="#trailer"
+                className="bg-red-600 p-0.5 hover:bg-red-700 transition-colors uppercase hidden  sm:block"
+              >
+                Watch the trailer
+              </button>
+              <a href="#author" className="hover:underline">
+                Host a screening
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </>
