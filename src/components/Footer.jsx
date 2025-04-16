@@ -8,7 +8,7 @@ export default function Footer() {
           <feTurbulence type="fractalNoise" baseFrequency="0.6" stitchTiles="stitch" numOctaves="3" />
         </filter>
       </svg>
-      <footer id="#footer" className="bg-white py-16 px-8 md:px-16 overflow-hidden relative">
+      <footer id="footer" className="bg-white py-16 px-8 md:px-16 overflow-hidden relative">
         {/* Grain Overlay */}
         <div
           className="absolute inset-0 z-0 opacity-20 pointer-events-none bg-black"

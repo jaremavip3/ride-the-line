@@ -10,7 +10,7 @@ import UkrainianArtsTo_logo from "../../public/sponsors/ukrainian-arts-to_logo.p
 
 export default function Overview() {
   return (
-    <section className="px-6 py-16 lg:py-24 bg-black/90">
+    <section id="overview" className="px-6 py-16 lg:py-24 bg-black/90">
       <div className="max-w-3xl mx-auto">
         <div className="flex items-center justify-center mb-8">
           <h2 className="text-3xl lg:text-4xl font-black text-red-600 tracking-wide">OVERVIEW</h2>
