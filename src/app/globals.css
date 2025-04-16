@@ -38,3 +38,119 @@ body {
     transform: translateX(-50%) !important;
   }
 }
+
+/* Left to right scroll */
+.swipe-pseudo::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.swipe-pseudo:hover::after {
+  width: 100%;
+}
+.swipe-pseudo:hover {
+  color: #e7000b;
+}
+/* Right to left scroll */
+.swipe-pseudo-oposite::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  right: 0px;
+  top: 0px;
+  z-index: -1;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.swipe-pseudo-oposite:hover::after {
+  width: 100%;
+}
+.swipe-pseudo-oposite:hover {
+  color: #e7000b;
+}
+
+.swipe-pseudo-trailer::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  left: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.swipe-pseudo-trailer:hover::after {
+  height: 100%;
+}
+.swipe-pseudo-trailer:hover {
+  color: #e7000b;
+}
+
+/* footer-styles.css */
+
+/* Базовий чорний ефект свайпу для кнопок */
+.swipe-button {
+  position: relative;
+  border: 1px solid #000;
+  isolation: isolate;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.swipe-button::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background: #000;
+  transition: all 0.3s ease;
+}
+
+.swipe-button:hover {
+  color: white;
+}
+
+.swipe-button:hover::after {
+  width: 100%;
+}
+
+/* Червоний ефект свайпу для кнопки Buy Tickets */
+.swipe-button-red {
+  position: relative;
+  border: 1px solid #000;
+  isolation: isolate;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.swipe-button-red::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background: #dc2626; /* червоний колір */
+  transition: all 0.3s ease;
+}
+
+.swipe-button-red:hover {
+  color: white;
+  border-color: #dc2626;
+}
+
+.swipe-button-red:hover::after {
+  width: 100%;
+}

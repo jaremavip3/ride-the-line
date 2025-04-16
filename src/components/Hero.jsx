@@ -70,7 +70,7 @@ export default function Hero() {
             onClick={() => {
               setIsPlaying(true);
             }}
-            className="  bg-red-600 text-xl p-1 rounded-sm hover:bg-red-700 transition-colors uppercase "
+            className="  bg-red-600 text-xl p-1 font-bold rounded-sm hover:bg-red-700 transition-colors uppercase "
           >
             Watch the trailer
           </button>
@@ -89,9 +89,12 @@ export default function Hero() {
         </div>
 
         <div className="absolute bottom-1/12 w-full ">
-          <div className="container mx-auto px-3 md:px-12 lg:px-16 sm:text-base md:text-lg lg:text-xl xl:text-2xl  ">
-            <div className=" flex gap-10 md:gap-14 lg:gap-20 text-white uppercase  justify-center items-center">
-              <a href="#overview" className="hover:underline">
+          <div className="container mx-auto  px-3 md:px-12 lg:px-16 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl  ">
+            <div className=" flex gap-2  sm:gap-6 md:gap-14 lg:gap-20 text-white uppercase   justify-center items-center">
+              <a
+                href="#overview"
+                className="  z-10  px-3 py-1 relative inline-block tracking-widest font-bold swipe-pseudo"
+              >
                 About the film
               </a>
               <button
@@ -99,11 +102,14 @@ export default function Hero() {
                 onClick={() => {
                   setIsPlaying(true);
                 }}
-                className="bg-red-600 p-0.5 hover:bg-red-700 transition-colors uppercase hidden  sm:block"
+                className="bg-red-600 p-0.5 hover:bg-red-700 transition-colors font-bold uppercase hidden z-10 px-3 py-1 relative sm:inline-block tracking-widest  swipe-pseudo-trailer"
               >
                 Watch the trailer
               </button>
-              <a href="#author" className="hover:underline">
+              <a
+                href="#author"
+                className=" z-10 px-3 py-1 relative inline-block tracking-widest font-bold swipe-pseudo-oposite"
+              >
                 Host a screening
               </a>
             </div>

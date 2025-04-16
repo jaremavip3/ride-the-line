@@ -1,4 +1,3 @@
-// components/FixedFooter.jsx
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -10,15 +9,12 @@ export default function FixedFooter() {
   useEffect(() => {}, []);
   // Sample screenings data - replace with your actual data
   const screenings = [
-    { date: "11 JAN", country: "CA", city: "TORONTO", ticketsLink: "", infoLink: "https://example.com/info" },
-    { date: "16 JAN", country: "UA", city: "LVIV", ticketsLink: "https://example.com/tickets", infoLink: "" },
-    { date: "18 JAN", country: "FR", city: "PARIS", ticketsLink: "https://example.com/tickets2", infoLink: "" },
     {
-      date: "23 JAN",
-      country: "CZ",
-      city: "PRAGUE",
-      ticketsLink: "https://example.com/tickets3",
-      infoLink: "https://example.com/info2",
+      date: "26 APR",
+      country: "CA",
+      city: "TORONTO",
+      ticketsLink: "https://www.tuff.film/events/ride-the-line",
+      infoLink: "https://www.tuff.film/",
     },
   ];
 
@@ -68,7 +64,7 @@ export default function FixedFooter() {
 
         {/* Expanded Calendar State */}
         {isCalendarOpen && (
-          <div className="w-full">
+          <div className="w-full  ">
             {/* Header */}
             <div className="border-b-2 border-black flex justify-between items-center py-2 px-4 md:px-8">
               <span className="font-bold uppercase tracking-wider text-lg">Next screenings</span>
@@ -115,6 +111,14 @@ export default function FixedFooter() {
                 </li>
               ))}
             </ul>
+            {/* Coming soon note */}
+            <div className="border-b-2 border-black py-3 px-4 md:px-8">
+              <p className="font-bold uppercase tracking-wider text-lg">More screenings coming soon...</p>
+            </div>
+            {/* Footer Note */}
+            <div className="absolute bottom-4 w-full  border-t-2 border-black py-2 px-4 md:px-8 text-sm text-center">
+              <p className="text-gray-600">For more screenings and updates, follow us on our social media channels.</p>
+            </div>
           </div>
         )}
       </footer>
