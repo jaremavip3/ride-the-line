@@ -3,7 +3,7 @@ import Gorgany_logo from "../../public/sponsors/gorgany_logo.svg";
 import Turbat_logo from "../../public/sponsors/turbat_logo.svg";
 import CanUkrFoundation_logo from "../../public/sponsors/can-ukr-foundation_logo.png";
 import AidForArtists_logo from "../../public/sponsors/aid-for-artists_logo.jpg";
-import VeloPlaneta_logo from "../../public/sponsors/velo-planeta_logo.png";
+import VeloPlaneta_logo from "../../public/sponsors/VeloPlaneta_logo.svg";
 import SVI_logo from "../../public/sponsors/svi_logo.png";
 import JamesCook_logo from "../../public/sponsors/james-cook_logo.png";
 import UkrainianArtsTo_logo from "../../public/sponsors/ukrainian-arts-to_logo.png";

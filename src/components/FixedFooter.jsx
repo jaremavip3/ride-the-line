@@ -6,6 +6,7 @@ import MovingLottie from "./MovingBic";
 export default function FixedFooter() {
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
   const [height, setHeight] = useState(0);
+  const [showBikeAnimation, setShowBikeAnimation] = useState(true);
   useEffect(() => {}, []);
   // Sample screenings data - replace with your actual data
   const screenings = [
@@ -17,9 +18,21 @@ export default function FixedFooter() {
       infoLink: "https://www.tuff.film/",
     },
   ];
+  // Automatically hide the bike animation after 8 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowBikeAnimation(false);
+    }, 8000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const toggleCalendar = () => {
+    if (!isCalendarOpen) {
+      setShowBikeAnimation(false);
+    }
     setIsCalendarOpen(!isCalendarOpen);
+
     if (!isCalendarOpen) {
       document.body.classList.add("overflow-hidden");
     } else {
@@ -30,13 +43,13 @@ export default function FixedFooter() {
   return (
     <div className="relative">
       <div
-        className="fixed left-0 right-0 pointer-events-none"
+        className="fixed left-0 right-0 pointer-events-none "
         style={{
           bottom: "50px",
           zIndex: 51,
         }}
       >
-        <MovingLottie />
+        <MovingLottie showAnimation={showBikeAnimation} />
       </div>
       <footer
         className={`fixed bottom-0 left-0 right-0 z-50 bg-white border-t-4 border-red-600 transition-all duration-250 ease-in-out ${

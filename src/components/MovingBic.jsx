@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 // import bike_animation from "../../public/animations/wCDtr8Wnan.lottie";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
-export default function MovingLottie() {
+export default function MovingLottie({ showAnimation = true }) {
   const [animationData, setAnimationData] = useState(null);
   useEffect(() => {
     // Load the animation data on the client side
@@ -14,8 +14,10 @@ export default function MovingLottie() {
       .then((data) => setAnimationData(data.default || data))
       .catch((err) => console.error("Failed to load animation:", err));
   }, []);
+
+  if (!showAnimation) return null;
   return (
-    <div className="absolute  w-full bottom-0  z-10  h-28 pointer-events-none overflow-hidden">
+    <div className="absolute  w-full bottom-0  z-20  h-28 pointer-events-none overflow-hidden">
       <motion.div
         initial={{ x: -200, y: 0 }} // Start position (left of screen)
         animate={{ x: "100vw", y: 0 }} // End position (right of screen)
@@ -31,7 +33,7 @@ export default function MovingLottie() {
           left: 0,
         }}
       >
-        {animationData && <Lottie animationData={animationData} loop={true} autoplay={true} style={{ width: 200 }} />}
+        {animationData && <Lottie animationData={animationData} loop={false} autoplay={true} style={{ width: 200 }} />}
       </motion.div>
     </div>
   );

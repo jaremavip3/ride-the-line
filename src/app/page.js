@@ -13,7 +13,7 @@ import MovingLottie from "@/components/MovingBic";
 export default function Home() {
   return (
     <div className=" font-[family-name:var(--font-geist-sans)]">
-      <ProgressBar />
+      {/* <ProgressBar /> */}
 
       <Header />
 
