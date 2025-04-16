@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { getImageProps } from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-
+import SplitText from "./HeaderSplitText";
 import desktop_background from "../../public/test_new.jpg";
 import mobile_background from "../../public/test_new_mobile.jpg";
 import test_background from "../../public/test_background.jpg";
@@ -79,16 +79,12 @@ export default function Hero() {
         <div className="absolute  inset-0 flex items-center  ">
           <div className="container mx-auto px-6 md:px-12 lg:mx-16  ">
             <div className=" md:w-1/2 lg:w-1/2 leading-[0.9] tracking-[-0.02em] text-7xl sm:text-9xl lg:text-[9rem] flex">
-              <div className="sm:bg-transparent rounded-lg ">
-                <span className="font-thin drop-shadow-2xl">RIDE</span> <br />
-                <span className="font-medium drop-shadow-2xl">THE</span> <br />
-                <span className="text-red-600/85 font-black">LINE</span>
-              </div>
+              <SplitText />
             </div>
           </div>
         </div>
 
-        <div className="absolute bottom-1/12 w-full ">
+        <div className="absolute bottom-1/12  w-full ">
           <div className="container mx-auto  px-3 md:px-12 lg:px-16 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl  ">
             <div className=" flex gap-2  sm:gap-6 md:gap-14 lg:gap-20 text-white uppercase   justify-center items-center">
               <a
