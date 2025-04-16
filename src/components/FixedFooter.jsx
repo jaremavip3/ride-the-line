@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import MovingLottie from "./MovingBic";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function FixedFooter() {
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
@@ -126,105 +127,132 @@ export default function FixedFooter() {
       >
         <MovingLottie showAnimation={showBikeAnimation} />
       </div>
-      <footer
-        className={`fixed bottom-0 left-0 right-0 z-50 bg-white border-t-4 border-red-600 transition-all duration-250 ease-in-out ${
-          isCalendarOpen ? "h-screen overflow-auto" : "h-[50px] md:h-[50px]"
-        }`}
+      <motion.footer
+        initial={false}
+        animate={{ height: isCalendarOpen ? "100dvh" : "50px" }}
+        transition={{ type: "spring", damping: 15, stiffness: 100, mass: 1.5, restDelta: 0.01 }}
+        className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t-4 border-red-600 transition-all duration-250 ease-in-out "
       >
-        {/* Collapsed Footer State */}
-        {!isCalendarOpen && (
-          <div className="max-w-5xl mx-auto px-4 h-full flex items-center justify-between">
-            <div className="flex items-center">
-              <span className="hidden md:inline-block font-bold text-sm text-black mr-2">NEXT SCREENING:</span>
-              <span className="flex">
-                {screenings[0].date} <span className="mx-1 hidden sm:block"> {screenings[0].year}</span>/
-                {screenings[0].country} / {screenings[0].city}
-              </span>
-            </div>
+        <AnimatePresence>
+          {/* Collapsed Footer State */}
+          {!isCalendarOpen && (
+            <div className="max-w-5xl mx-auto px-4 h-full flex items-center justify-between text-black">
+              <div className="flex items-center">
+                <span className="hidden md:inline-block font-bold text-sm  mr-2">NEXT SCREENING:</span>
+                <span className="flex">
+                  {screenings[0].date} <span className="mx-1 hidden sm:block"> {screenings[0].year}</span>/
+                  {screenings[0].country} / {screenings[0].city}
+                </span>
+              </div>
 
-            <button
-              onClick={toggleCalendar}
-              className="border border-black px-2 py-0.5 sm:px-4 sm:py-1 text-black font-bold text-sm uppercase tracking-wider hover:bg-red-600 hover:text-white hover:border-red-600 transition-colors"
-            >
-              FULL CALENDAR
-            </button>
-          </div>
-        )}
-
-        {/* Expanded Calendar State */}
-        {isCalendarOpen && (
-          <div className="w-full  ">
-            {/* Header */}
-            <div className="border-b-2 border-black flex justify-between items-center py-2 px-4 md:px-8">
-              <span className="font-bold uppercase tracking-wider text-lg">Next screenings</span>
               <button
                 onClick={toggleCalendar}
-                className="border border-black px-4 py-1 text-black font-bold text-sm uppercase tracking-wider hover:bg-red-600 hover:text-white hover:border-red-600 transition-colors"
+                className="border border-black px-2 py-0.5 sm:px-4 sm:py-1 text-black font-bold text-sm uppercase tracking-wider hover:bg-red-600 hover:text-white hover:border-red-600 transition-colors"
               >
-                Close
+                FULL CALENDAR
               </button>
             </div>
+          )}
 
-            {/* Screenings List */}
-            <ul className="w-full">
-              {screenings.map((screening, index) => (
-                <li
-                  key={index}
-                  className="border-b-2 text-black border-black py-3 px-4 md:px-8 flex flex-col md:flex-row md:items-center md:justify-between"
+          {/* Expanded Calendar State */}
+          {isCalendarOpen && (
+            <div className="w-full  ">
+              {/* Header */}
+              <div className="border-b-2 border-black flex justify-between items-center py-2 px-4 md:px-8">
+                <span className="font-bold uppercase tracking-wider text-lg text-black">Next screenings</span>
+                <button
+                  onClick={toggleCalendar}
+                  className="border border-black px-4 py-1 text-black font-bold text-sm uppercase tracking-wider hover:bg-red-600 hover:text-white hover:border-red-600 transition-colors"
                 >
-                  <div className="flex justify-between items-center ">
-                    <div className="flex flex-wrap items-center mb-2 md:mb-0">
-                      <span className="font-bold mr-2">{screening.date}</span>
-                      <span className="mr-2">/ {screening.country} /</span>
-                      <span>{screening.city}</span>
-                    </div>
-                    {!screening.status && <span className=" text-red-600 font-bold md:ml-10">Ended</span>}
-                  </div>
+                  Close
+                </button>
+              </div>
 
-                  <div className="flex gap-2">
-                    {screening.ticketsLink && (
-                      <Link
-                        href={screening.ticketsLink}
-                        className="border border-black px-3 py-1 text-black font-medium text-sm uppercase tracking-wider hover:bg-red-600 hover:text-white hover:border-red-600 transition-colors"
-                      >
-                        Tickets
-                      </Link>
-                    )}
-
-                    {screening.infoLink && (
-                      <Link
-                        href={screening.infoLink}
-                        className="border border-black px-3 py-1 text-black font-medium text-sm uppercase tracking-wider hover:bg-red-600 hover:text-white hover:border-red-600 transition-colors"
-                      >
-                        More info
-                      </Link>
-                    )}
-                  </div>
-                </li>
-              ))}
-            </ul>
-            {/* Coming soon note */}
-            <div className="border-b-2 border-black py-3 px-4 md:px-8">
-              <p className="font-bold uppercase tracking-wider text-lg">More screenings coming soon...</p>
-            </div>
-            {/* Footer Note */}
-            <div className="absolute bottom-4 w-full  border-t-2 border-black py-2 px-4 md:px-8 text-sm text-center">
-              <p className="text-gray-600">For more updates follow me on social medias.</p>
-              <div className="flex flex-row justify-center gap-3 mt-2 sm:mt-3 sm:gap-4">
-                {mediaSvgs.map((media, index) => (
-                  <a
+              {/* Screenings List */}
+              <ul className="w-full">
+                {screenings.map((screening, index) => (
+                  <motion.li
                     key={index}
-                    href={media.url}
-                    className="p-2 rounded-lg flex items-center border border-gray-300 justify-center transition-all duration-500 hover:border-gray-100 hover:bg-gray-100"
+                    initial={{ opacity: 0, y: 40 }} // Start from further down
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      delay: 0.05 + index * 0.2, // Increase base delay (0.5 instead of 0.05)
+                      // and stagger time (0.2 instead of 0.1)
+                      duration: 0.2, // Add duration for longer animation
+                      type: "spring", // Use spring physics for bounce effect
+                      stiffness: 40, // Lower stiffness for more gentle motion
+                      damping: 8, // Medium damping for some bounciness
+                    }}
+                    className="border-b-2 text-black border-black py-3 px-4 md:px-8 flex flex-col md:flex-row md:items-center md:justify-between"
                   >
-                    {media.svg}
-                  </a>
+                    <div className="flex justify-between items-center ">
+                      <div className="flex flex-wrap items-center mb-2 md:mb-0">
+                        <span className="font-bold mr-2">{screening.date}</span>
+                        <span className="mr-2">/ {screening.country} /</span>
+                        <span>{screening.city}</span>
+                      </div>
+                      {!screening.status && <span className=" text-red-600 font-bold md:ml-10">Ended</span>}
+                    </div>
+
+                    <div className="flex gap-2">
+                      {screening.ticketsLink && (
+                        <Link
+                          href={screening.ticketsLink}
+                          className="border border-black px-3 py-1 text-black font-medium text-sm uppercase tracking-wider hover:bg-red-600 hover:text-white hover:border-red-600 transition-colors"
+                        >
+                          Tickets
+                        </Link>
+                      )}
+
+                      {screening.infoLink && (
+                        <Link
+                          href={screening.infoLink}
+                          className="border border-black px-3 py-1 text-black font-medium text-sm uppercase tracking-wider hover:bg-red-600 hover:text-white hover:border-red-600 transition-colors"
+                        >
+                          More info
+                        </Link>
+                      )}
+                    </div>
+                  </motion.li>
                 ))}
+              </ul>
+              {/* Coming soon note */}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }} // Start from further down
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.35, // Increase base delay (0.5 instead of 0.05)
+                  // and stagger time (0.2 instead of 0.1)
+                  duration: 0.2, // Add duration for longer animation
+                  type: "spring", // Use spring physics for bounce effect
+                  stiffness: 40, // Lower stiffness for more gentle motion
+                  damping: 8, // Medium damping for some bounciness
+                }}
+                className="border-b-2 border-black py-3 px-4 md:px-8"
+              >
+                <p className="font-bold uppercase tracking-wider text-gray-400">More screenings coming soon...</p>
+              </motion.div>
+              {/* Footer Note */}
+              <div className="absolute bottom-4 w-full  border-t-2 border-black py-2 px-4 md:px-8 text-sm text-center">
+                <p className="text-gray-600">For more updates follow me on social medias.</p>
+                <div className="flex flex-row justify-center gap-3 mt-2 sm:mt-3 sm:gap-4">
+                  {mediaSvgs.map((media, index) => (
+                    <motion.a
+                      key={index}
+                      initial={{ scale: 0, opacity: 0, rotate: -10 }} // Start smaller and rotated
+                      animate={{ scale: 1, opacity: 1, rotate: 0 }} // End at normal size and no rotation
+                      href={media.url}
+                      className="p-2 rounded-lg flex items-center border border-gray-300 justify-center transition-all duration-500 hover:border-gray-100 hover:bg-gray-100"
+                    >
+                      {media.svg}
+                    </motion.a>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        )}
-      </footer>
+          )}
+        </AnimatePresence>
+      </motion.footer>
     </div>
   );
 }

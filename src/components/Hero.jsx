@@ -36,7 +36,7 @@ export default function Hero() {
     height: "100vh",
     width: "100%",
 
-    backgroundPosition: "center",
+    backgroundPosition: "top",
 
     backgroundRepeat: "no-repeat",
   };
