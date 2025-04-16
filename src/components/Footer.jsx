@@ -53,9 +53,9 @@ export default function Footer() {
 
           {/* Copyright section with logo */}
           <div className="flex flex-col md:flex-row justify-between items-center pt-6 border-t text-lg  border-gray-200">
-            <span className="  mb-4 md:mb-0">Ihor Volochii 2025</span>
+            <span className="text-black  mb-4 md:mb-0">Ihor Volochii 2025</span>
 
-            <div className=" font-bold uppercase tracking-wide">
+            <div className=" font-bold uppercase tracking-wide text-black">
               Ride the <span className="text-red-600">LINE...</span>
             </div>
           </div>
