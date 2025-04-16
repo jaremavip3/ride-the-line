@@ -170,7 +170,7 @@ export default function FixedFooter() {
               {screenings.map((screening, index) => (
                 <li
                   key={index}
-                  className="border-b-2 border-black py-3 px-4 md:px-8 flex flex-col md:flex-row md:items-center md:justify-between"
+                  className="border-b-2 text-black border-black py-3 px-4 md:px-8 flex flex-col md:flex-row md:items-center md:justify-between"
                 >
                   <div className="flex justify-between items-center ">
                     <div className="flex flex-wrap items-center mb-2 md:mb-0">
