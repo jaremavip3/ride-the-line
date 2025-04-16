@@ -11,7 +11,8 @@ export default function FixedFooter() {
   // Sample screenings data - replace with your actual data
   const screenings = [
     {
-      date: "26 APR 2025",
+      date: "26 APR",
+      year: "2025",
       country: "CA",
       city: "TORONTO",
       ticketsLink: "https://www.tuff.film/events/ride-the-line",
@@ -19,7 +20,8 @@ export default function FixedFooter() {
       status: true,
     },
     {
-      date: "31 OCT 2024",
+      date: "31 OCT",
+      year: "2024",
       country: "UA",
       city: "KYIV",
       ticketsLink: "https://molodist.com/en/film/ride-the-line#shedule_film",
@@ -133,15 +135,16 @@ export default function FixedFooter() {
         {!isCalendarOpen && (
           <div className="max-w-5xl mx-auto px-4 h-full flex items-center justify-between">
             <div className="flex items-center">
-              <span className="hidden md:inline-block font-bold text-black mr-2">NEXT SCREENING:</span>
-              <span className="text-black">
-                {screenings[0].date} / {screenings[0].country} / {screenings[0].city}
+              <span className="hidden md:inline-block font-bold text-sm text-black mr-2">NEXT SCREENING:</span>
+              <span className="flex">
+                {screenings[0].date} <span className="mx-1 hidden sm:block"> {screenings[0].year}</span>/
+                {screenings[0].country} / {screenings[0].city}
               </span>
             </div>
 
             <button
               onClick={toggleCalendar}
-              className="border border-black px-4 py-1 text-black font-bold text-sm uppercase tracking-wider hover:bg-red-600 hover:text-white hover:border-red-600 transition-colors"
+              className="border border-black px-2 py-0.5 sm:px-4 sm:py-1 text-black font-bold text-sm uppercase tracking-wider hover:bg-red-600 hover:text-white hover:border-red-600 transition-colors"
             >
               FULL CALENDAR
             </button>
