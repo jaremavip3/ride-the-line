@@ -154,3 +154,9 @@ body {
 .swipe-button-red:hover::after {
   width: 100%;
 }
+
+/* Footer socials hover */
+
+.swipe-socials:hover span:last-child {
+  height: 110%;
+}

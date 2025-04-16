@@ -23,24 +23,23 @@ export default function Footer() {
 
               <div className="flex flex-col md:flex-row md:flex-nowrap gap-y-6 md:gap-x-8 text-black font-bold text-lg uppercase">
                 {/* Links with ONBOARD-style hover effects */}
-                <a href="#" className="group relative inline-block    tracking-wide">
-                  CONTACT
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-600 group-hover:bg-black transition-colors duration-300"></span>
+                <a href="#" className="swipe-socials relative inline-block w-max tracking-wide">
+                  <span className="relative z-10 px-1 transition-all duration-200 hover:text-white">CONTACT</span>
+                  <span className="absolute left-0 -bottom-[2px] w-full  h-[3px] transition-all bg-red-600"></span>
                 </a>
 
-                <a href="#" className="group relative inline-block  tracking-wide">
-                  FACEBOOK
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-600 group-hover:bg-black transition-colors duration-300"></span>
+                <a href="#" className="swipe-socials relative inline-block w-max tracking-wide">
+                  <span className="relative z-10 px-1 transition-all duration-200 hover:text-white">FACEBOOK</span>
+                  <span className="absolute left-0 -bottom-[2px] w-full  h-[3px] transition-all bg-red-600"></span>
                 </a>
 
-                <a href="#" className="group relative inline-block    tracking-wide">
-                  INSTAGRAM
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-600 group-hover:bg-black transition-colors duration-300"></span>
+                <a href="#" className="swipe-socials relative inline-block w-max tracking-wide">
+                  <span className="relative z-10 px-1 transition-all duration-200 hover:text-white">INSTAGRAM</span>
+                  <span className="absolute left-0 -bottom-[2px] w-full h-[3px] transition-all bg-red-600"></span>
                 </a>
-
-                <a href="#" className="group relative inline-block   tracking-wide">
-                  TWITTER(X)
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-600 group-hover:bg-black transition-colors duration-300"></span>
+                <a href="#" className="swipe-socials relative inline-block w-max tracking-wide">
+                  <span className="relative z-10 px-1 transition-all duration-200 hover:text-white">TWITTER</span>
+                  <span className="absolute left-0 -bottom-[2px] w-full h-[3px] transition-all bg-red-600"></span>
                 </a>
               </div>
             </div>
