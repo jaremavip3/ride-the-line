@@ -8,7 +8,7 @@ export default function Footer() {
           <feTurbulence type="fractalNoise" baseFrequency="0.6" stitchTiles="stitch" numOctaves="3" />
         </filter>
       </svg>
-      <footer className="bg-white py-16 px-8 md:px-16 overflow-hidden relative">
+      <footer id="#footer" className="bg-white py-16 px-8 md:px-16 overflow-hidden relative">
         {/* Grain Overlay */}
         <div
           className="absolute inset-0 z-0 opacity-20 pointer-events-none bg-black"
@@ -28,12 +28,18 @@ export default function Footer() {
                   <span className="absolute left-0 -bottom-[2px] w-full  h-[3px] transition-all bg-red-600"></span>
                 </a>
 
-                <a href="#" className="swipe-socials relative inline-block w-max tracking-wide">
+                <a
+                  href="https://www.facebook.com/share/16P3eoKN8k/?mibextid=wwXIfr"
+                  className="swipe-socials relative inline-block w-max tracking-wide"
+                >
                   <span className="relative z-10 px-1 transition-all duration-200 hover:text-white">FACEBOOK</span>
                   <span className="absolute left-0 -bottom-[2px] w-full  h-[3px] transition-all bg-red-600"></span>
                 </a>
 
-                <a href="#" className="swipe-socials relative inline-block w-max tracking-wide">
+                <a
+                  href="https://www.instagram.com/volo4iy?igsh=ZG1hc2xsbWZpZWUy"
+                  className="swipe-socials relative inline-block w-max tracking-wide"
+                >
                   <span className="relative z-10 px-1 transition-all duration-200 hover:text-white">INSTAGRAM</span>
                   <span className="absolute left-0 -bottom-[2px] w-full h-[3px] transition-all bg-red-600"></span>
                 </a>

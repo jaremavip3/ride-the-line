@@ -107,7 +107,7 @@ export default function Hero() {
                 Watch the trailer
               </button>
               <a
-                href="#author"
+                href="#footer"
                 className=" z-10 px-3 py-1 relative inline-block tracking-widest font-bold swipe-pseudo-oposite"
               >
                 Host a screening
