@@ -42,16 +42,3 @@ For a production build:
 npm run build
 npm run start
 ```
-
-## Updating Content
-
-Most content is static so it is easy to update for new screenings or festival events.
-
-- Screening dates and links: `src/components/FixedFooter.jsx`
-- Film overview and sponsor logos: `src/components/Overview.jsx`
-- Director text and portrait: `src/components/Author.jsx`
-- Trailer file: `public/video/trailer.mp4`
-
-## What I Focused On
-
-I wanted the site to feel simple, direct, and cinematic. Most of my work went into the first screen, the trailer flow, responsive image behavior, and keeping screening information visible without making the page feel crowded.
