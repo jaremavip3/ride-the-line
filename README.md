@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ride the Line
 
-## Getting Started
+A film website for **Ride the Line**, a documentary about two cyclists riding 1,500 km along the frontline in Ukraine.
 
-First, run the development server:
+Live site: https://ride-the-line.vercel.app
+
+![Ride the Line website preview](./public/ride-the-line_desktop.jpg)
+
+## About
+
+I built this as a focused landing page for the film. The goal was to make the site feel close to the story: bold first screen, quick trailer access, clear screening info, and space for sponsors and the director.
+
+## Features
+
+- Responsive hero section with separate desktop and mobile images
+- Local trailer video opened in a modal
+- Animated title text and bike animation
+- Fixed screening bar with an expandable calendar
+- Sponsor block and director section
+- Static Next.js deployment on Vercel
+
+## Tech Stack
+
+- Next.js 15
+- React 19
+- Tailwind CSS 4
+- Framer Motion and Motion Plus
+- Lottie animation
+
+## Run Locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+For a production build:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## Updating Content
 
-To learn more about Next.js, take a look at the following resources:
+Most content is static so it is easy to update for new screenings or festival events.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Screening dates and links: `src/components/FixedFooter.jsx`
+- Film overview and sponsor logos: `src/components/Overview.jsx`
+- Director text and portrait: `src/components/Author.jsx`
+- Trailer file: `public/video/trailer.mp4`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## What I Focused On
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+I wanted the site to feel simple, direct, and cinematic. Most of my work went into the first screen, the trailer flow, responsive image behavior, and keeping screening information visible without making the page feel crowded.
